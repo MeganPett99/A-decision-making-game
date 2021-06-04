@@ -1,0 +1,57 @@
+print("welcome to the decision game!")
+name = input("what is your name? ")
+age = int(input("what is your age? "))
+
+health = 15
+
+if age >= 18:
+    print("You're old enough ")
+    play = input("would you like to play? ").lower()
+    if play == "yes":
+        print("Lets play!, you're starting with", health, "health")
+    else:
+        play == "no"
+        print("That's a shame ")
+else:
+    print("Sorry you're not old enough")
+
+
+left_or_right = input("First choice... Left or right? (left/right) ")
+if left_or_right == "left":
+    answer = input("congratulations, you've follow the path and reached a cave... "
+                   "do you go around or walk through? (around/through) ")
+    if answer == "around":
+        print("you went around the cave and reached the other side, you find a path and decided to walk down it.")
+    elif answer == "through":
+        print("you went through the cave however you got bit by a bat and lost 3 health.")
+        health -= 3
+        print("you're remaining health is ", health)
+else:
+    print("you fell down a hole and lost...")
+
+
+gnome = input("You've been walking a while when you stumble a group of gnomes.."
+              " they ask if you would go to a party with them... do you go or ignore them? (go/ignore)")
+if gnome == "go":
+    print("you go to the party and they spiked your drink, you wake up on the side of the path confused")
+    health -= 2
+    print("you're health has gone down due to dehydration", health)
+elif gnome == "ignore":
+    print("They attack you and you lose most of your health")
+    health -= 10
+    print(" you're health is ", health)
+
+town_or_revenge = input("You're furious about the gnomes! how could they do such thing? do you go to the nearest town "
+                        "for a bevvy or do you decide to get revenge? (town/revenge")
+if town_or_revenge == "town":
+    print("you go to the nearest town contemplating what just happened. "
+          "You have a cold beer and wonder what is next on your adventure")
+else:
+    town_or_revenge == "revenge"
+    print("you go to seek revenge on the gnomes. "
+          "you find some tools to use for defense, it wasn't easy sneaking through their town, "
+          "you find their leader and kidnap him for some ransom money")
+
+
+
+
